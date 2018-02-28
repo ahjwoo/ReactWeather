@@ -29,7 +29,8 @@ module.exports = {
       WeatherMessage: 'app/components/WeatherMessage.jsx',
       About: 'app/components/About.jsx',
       Examples: 'app/components/Examples.jsx',
-      openWeatherMap: 'app/api/openWeatherMap.jsx'
+      openWeatherMap: 'app/api/openWeatherMap.jsx',
+      Background: 'img/memphis-colorful.png'
     },
     extensions: ['', '.js', '.jsx']
   },
@@ -43,7 +44,16 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
       }
-    ]
+    ],
+    rules: [
+       {
+         test: /\.(jpe?g|png|gif|svg)$/i,
+         use: [
+           'url-loader?limit=10000',
+           'img-loader'
+         ]
+       }
+     ]
   },
   devtool: 'cheap-module-eval-source-map'
 };
