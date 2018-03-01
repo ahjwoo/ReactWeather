@@ -30,8 +30,8 @@ module.exports = {
       About: 'app/components/About.jsx',
       Examples: 'app/components/Examples.jsx',
       openWeatherMap: 'app/api/openWeatherMap.jsx',
-      Background: 'img/memphis-colorful.png',
-      ErrorModal: 'app/components/ErrorModal.jsx'
+      ErrorModal: 'app/components/ErrorModal.jsx',
+      applicationStyles: 'app/styles/app.css'
     },
     extensions: ['', '.js', '.jsx']
   },
@@ -44,17 +44,12 @@ module.exports = {
         },
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
-      }
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)/,  
+        loader: 'url?limit=25000',
+      },
     ],
-    rules: [
-       {
-         test: /\.(jpe?g|png|gif|svg)$/i,
-         use: [
-           'url-loader?limit=10000',
-           'img-loader'
-         ]
-       }
-     ]
   },
   devtool: 'cheap-module-eval-source-map'
 };
