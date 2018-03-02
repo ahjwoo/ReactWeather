@@ -1,0 +1,20 @@
+$space-large: 2.5rem;
+$title-color: #1583cc;
+
+.page-title {
+  color: $title-color;
+  margin-top: $space-large;
+  margin-bottom: $space-large;
+}
+
+input[type=search] {
+  box-shadow: none;
+}
+
+.everything {
+  height: 100vh;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  background-image: url("../../public/img/memphis-colorful.png");
+}
